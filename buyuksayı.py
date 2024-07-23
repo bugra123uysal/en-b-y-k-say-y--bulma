@@ -57,17 +57,22 @@ def aaa():
 """ sayıları girip verileri gönderme """
 bs=tk.Button(a,text="gönder", command=aaa )
 bs.place(x=140, y=250)
-def bitti():
-      
+def bdenkye():
+      """ büyükden küçüğe """
       sayılar.sort(reverse=True) 
       gör.config(text=' '.join(map(str,sayılar)))
      
-      
-""" sonucu gösterme buttonu """
-bas=tk.Button(a,text="bittir", command=bitti  )
+def kdenbye():
+     """ küçükden büyüğe """
+     sayılar.sort()    
+     gör.config(text=' '.join(map(str,sayılar)))
+"""büyükden küçüğe  sonucu gösterme buttonu """
+bas=tk.Button(a,text="b-k", command=bdenkye)
 bas.place(x=140, y=50) 
     
-
+""" küçükden büyüğe sıralama buttonu """
+kb=tk.Button(a,text="k-b", command=kdenbye)
+kb.place(x=250, y=50) 
      
 
 
