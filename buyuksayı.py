@@ -57,15 +57,30 @@ def aaa():
 """ sayıları girip verileri gönderme """
 bs=tk.Button(a,text="gönder", command=aaa )
 bs.place(x=140, y=250)
+""" büyükden küçüğe """
 def bdenkye():
-      """ büyükden küçüğe """
+    
       sayılar.sort(reverse=True) 
       gör.config(text=' '.join(map(str,sayılar)))
-     
+
+""" küçükden büyüğe """
 def kdenbye():
-     """ küçükden büyüğe """
+     
      sayılar.sort()    
      gör.config(text=' '.join(map(str,sayılar)))
+""" en büyüğü bulmak """ 
+def byk():
+     if sayılar:
+          bınumbers=max(sayılar)
+         
+
+          gör.config(text=bınumbers)
+                     
+     else:
+          gör.config(text="hatalı tekrar deneyiniz")
+                                        
+     
+       
 """büyükden küçüğe  sonucu gösterme buttonu """
 bas=tk.Button(a,text="b-k", command=bdenkye)
 bas.place(x=140, y=50) 
@@ -74,7 +89,9 @@ bas.place(x=140, y=50)
 kb=tk.Button(a,text="k-b", command=kdenbye)
 kb.place(x=250, y=50) 
      
-
+"""  en büyük sayıyı bulmak """
+big=tk.Button(a,text="büyük",command=byk)
+big.place(x=350, y=50)
 
 a.mainloop()
 
