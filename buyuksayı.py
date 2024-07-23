@@ -79,8 +79,20 @@ def byk():
      else:
           gör.config(text="hatalı tekrar deneyiniz")
                                         
+""" en küçük  olanı bulmak  """
+def gck():
+     if sayılar:
+          guccuksayı=min(sayılar)
+
+          gör.config(text=guccuksayı)
+     else:
+            gör.config(text="hatalı tekrar deneyin")
+              
      
-       
+
+      
+    
+    
 """büyükden küçüğe  sonucu gösterme buttonu """
 bas=tk.Button(a,text="b-k", command=bdenkye)
 bas.place(x=140, y=50) 
@@ -92,6 +104,10 @@ kb.place(x=250, y=50)
 """  en büyük sayıyı bulmak """
 big=tk.Button(a,text="büyük",command=byk)
 big.place(x=350, y=50)
+
+""" en küçük sayıyı bulma """
+smaln=tk.Button(a,text="küçük", command=gck)
+smaln.place(x=450, y=50)
 
 a.mainloop()
 
